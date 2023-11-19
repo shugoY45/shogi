@@ -1,0 +1,27 @@
+/* styles/ShogiBoard.module.css */
+.shogi-board {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background: white; /* 白いマスに黒い駒 */
+  border: 1px solid black; /* ボーダーの色を黒に */
+}
+
+.square:nth-child(odd) {
+  background: rgb(173, 179, 189); /* 黒いマスに白い駒 */
+}
+
+.pawn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; /* 駒の文字色を黒に */
+}
+
